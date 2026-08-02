@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+database/visitors.csv
+database/temp_photos/
+database/generated_videos/*.mp4
