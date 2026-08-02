@@ -29,7 +29,18 @@ def show_balloons_html():
 
 def show_confetti():
     st.markdown(
-        '<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script><script>setTimeout(() => { confetti({ particleCount: 200, spread: 80, origin: { y: 0.5 } }); }, 500);</script>',
+        '''
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+        <script>
+            setTimeout(() => {
+                confetti({
+                    particleCount: 200,
+                    spread: 80,
+                    origin: { y: 0.6 }
+                });
+            }, 400);
+        </script>
+        ''',
         unsafe_allow_html=True,
     )
 
@@ -55,7 +66,17 @@ def celebration_page(name):
     show_confetti()
     st.balloons()
     st.markdown(
-        f'<div class="celebration-card"><h1>Happy Friendship Day, {name}</h1><div class="hearts-container"><span class="floating-heart">❤️</span><span class="floating-heart">💖</span><span class="floating-heart">💕</span><span class="floating-heart">💝</span><span class="floating-heart">💗</span></div><p class="quote">"True friendship isn't about being inseparable. It's about being apart and nothing changes."</p><p class="author">- Unknown</p></div>',
+        f'''
+        <div class="celebration-card">
+            <h1>Happy Friendship Day, {name}</h1>
+            <div class="hearts-container">
+                <span class="floating-heart">❤️</span>
+                <span class="floating-heart">💖</span>
+                <span class="floating-heart">💕</span>
+            </div>
+            <p>Wishing you endless laughter, love, and unforgettable memories with Vihar!</p>
+        </div>
+        ''',
         unsafe_allow_html=True,
     )
 
@@ -82,6 +103,12 @@ def welcome_back_page(name):
     show_confetti()
     st.balloons()
     st.markdown(
-        f'<div class="welcome-back-card"><h1>Welcome back, {name}!</h1><p class="welcome-msg">You are already a friend of Vihar and have already celebrated Friendship Day here.</p><p class="friend-emoji">❤️✨💫</p></div>',
+        f'''
+        <div class="welcome-back-card">
+            <h1>Welcome back, {name}!</h1>
+            <p class="welcome-msg">You are already a friend of Vihar and have already celebrated Friendship Day here.</p>
+            <p class="friendship-note">Thanks for being part of this beautiful friendship celebration 🎉</p>
+        </div>
+        ''',
         unsafe_allow_html=True,
     )
